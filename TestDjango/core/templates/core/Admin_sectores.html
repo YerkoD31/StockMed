@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador de Taller</title>
+    <title>Administrador de Sectores</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
@@ -75,12 +75,12 @@
     </div>
     <div class="container my-3" style="background-color: rgb(126, 173, 254)" style="margin-top: 400px;">
         <p class="text-md-center text-light fs-3"> Lista de
-            productos y repuestos</p>
+            Sectores</p>
     </div>
     <div class="container">
         <div class="right">
             <button class="btn btn-sm btn-success"><a class="a text-md-center text-light fs-5" 
-                    href="{%url 'crear_Material'%}"> Agregar elemento</a></button>
+                    href="{%url 'crear_sector'%}"> Agregar Sector</a></button>
         </div>
     </div>
     <br>
@@ -95,11 +95,11 @@
                             <thead>
                                 <tr>
                                     <th style="width:5%;">ID</th>
-                                    <th style="width:30%;">Nombre del elemento</th>
-                                    <th style="width:35%;">Descripción del elemento</th>
-                                    <th style="width:5%;">Stock</th>
+                                    <th style="width:20%;">Nombre del sector</th>
+                                    <th style="width:35%;">Descripción del sector</th>
+                                    <th style="width:15%;">Sucursal</th>
                                     <!-- <th style="width:5%;">Acciones</th> -->
-                                    <th style="width:15%;">Ver elemento</th>
+                                    <th style="width:15%;">Ver sector</th>
                                     <!-- <th style="width:5%;">Aceptar</th> -->
                                     <th style="width:5%;">Eliminar</th>
                                     <th style="width:5%;">Editar</th>
@@ -265,9 +265,9 @@
                 pageLength: 5,
                 language: {
                     lengthMenu: "Mostrar _MENU_ registros por página",
-                    zeroRecords: "Ningún usuario encontrado",
+                    zeroRecords: "Ningún sector encontrado",
                     info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
-                    infoEmpty: "Ningún usuario encontrado",
+                    infoEmpty: "Ningún sector encontrado",
                     infoFiltered: "(filtrados desde _MAX_ registros totales)",
                     search: "Buscar:",
                     loadingRecords: "Cargando...",

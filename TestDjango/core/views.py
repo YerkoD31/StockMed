@@ -71,6 +71,10 @@ def Admin_General(request):
     return render(request, 'core/Admin_General.html', datos)
 
 
+def Admin_sectores(request):
+    return render(request, 'core/Admin_sectores.html')
+
+
 def crear_Taller(request):
     return render(request, 'core/crear_Taller.html')
 
@@ -89,6 +93,16 @@ def crear_Material(request):
 
     return render(request, 'core/Crear_Material.html', datos)
 
+
+def crear_sector(request):
+
+
+    return render(request, 'core/Crear_sector.html')
+
+def HistoricoSolicitud(request):
+
+
+    return render(request, 'core/HistoricoSolicitud.html')
 
 def Admin_Perfil(request):
     material = Material.objects.all()
