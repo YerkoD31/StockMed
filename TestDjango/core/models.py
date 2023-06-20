@@ -54,7 +54,7 @@ class Sector(models.Model):
     
 class Solicitud(models.Model):
     idSolicitud = models.AutoField(primary_key=True, verbose_name='Id de solicitud')
-    rutSolcitante = models.CharField(max_length=50, verbose_name='Rut de soliitante')
+    rutSolicitante = models.CharField(max_length=50, verbose_name='Rut de soliitante')
     nombre = models.CharField(max_length=50, verbose_name='Nombre de soliitante')
     detalle = models.CharField(max_length=50, verbose_name='Detalle solicitud')
     proyecto = models.CharField(max_length=50, verbose_name='Proyecto')
