@@ -40,3 +40,27 @@ class Instructor(models.Model):
 
     def __str__(self):
         return self.nombres
+    
+
+
+class Sector(models.Model):
+    idSector = models.AutoField(primary_key=True, verbose_name='Id de sector')
+    nombre = models.CharField(max_length=50, verbose_name='Nombre de sector')
+    descripcionSector = models.CharField(max_length=50, verbose_name='Descripcion de sector')
+    sucursal = models.CharField(max_length=50, verbose_name='Sucursal')
+
+    def __str__(self):
+        return self.nombre
+    
+class Solicitud(models.Model):
+    idSolicitud = models.AutoField(primary_key=True, verbose_name='Id de solicitud')
+    rutSolcitante = models.CharField(max_length=50, verbose_name='Rut de soliitante')
+    nombre = models.CharField(max_length=50, verbose_name='Nombre de soliitante')
+    detalle = models.CharField(max_length=50, verbose_name='Detalle solicitud')
+    proyecto = models.CharField(max_length=50, verbose_name='Proyecto')
+    jefatura = models.CharField(max_length=50, verbose_name='jefatura')
+    fecha = models.CharField(max_length=50, verbose_name='fecha')
+
+
+    def __str__(self):
+        return self.nombre

@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.core.mail import EmailMessage
-from core.models import Material, PostulacionInstr
+from core.models import Material, PostulacionInstr, Sector , Solicitud
 
 # Create your views here.
 
@@ -72,7 +72,11 @@ def Admin_General(request):
 
 
 def Admin_sectores(request):
-    return render(request, 'core/Admin_sectores.html')
+    sector = Sector.objects.all()
+    datos = {
+        'sector': sector
+    }
+    return render(request, 'core/Admin_sectores.html',datos)
 
 
 def crear_Taller(request):
@@ -100,9 +104,12 @@ def crear_sector(request):
     return render(request, 'core/Crear_sector.html')
 
 def HistoricoSolicitud(request):
+    solicitud = Solicitud.objects.all()
+    datos = {
+        'solicitud': solicitud
+    }
 
-
-    return render(request, 'core/HistoricoSolicitud.html')
+    return render(request, 'core/HistoricoSolicitud.html',datos)
 
 def Admin_Perfil(request):
     material = Material.objects.all()
